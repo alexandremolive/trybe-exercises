@@ -1,0 +1,53 @@
+body {
+    font-size: 16px;
+    font-family: monospace;
+    background-color #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    
+  }
+
+
+
+  h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    line-height: 3em;
+    text-align: center;
+    background-color: lightblue;
+
+  }
+
+  ul {
+    background-color: lightblue;
+    text-align: center;
+    list-style-type: square
+  }
+
+  .list-color {
+    background-color: lightgreen;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+    text-align: center;
+    color: darkcyan;
+  }
+
+  .yellow {
+    background-color: yellow;
+    text-decoration: overline
+  }
+
+  .red {
+    background-color: red;
+    text-decoration: line-through;
+
+  }
+
+  .brown {
+    background-color: brown;
+    text-decoration: underline;
+  }
