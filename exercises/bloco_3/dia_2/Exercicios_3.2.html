@@ -5,18 +5,54 @@
   <meta charset="UTF-8">
   <title>HTML</title>
   <style>
+    body {
+      font-size: 16px;
+      font-family: monospace;
+    }
+
+
+
     h1 {
       font-size: 65px;
       color: orange;
+      font-family: sans-serif;
+      line-height: 3em;
+      text-align: center;
+      background-color: lightblue;
 
     }
 
     ul {
       background-color: lightblue;
+      text-align: center;
+      list-style-type: square
     }
 
     .list-color {
       background-color: lightgreen;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 3em;
+      font-style: italic;
+      text-align: center
+    }
+
+    .yellow {
+      background-color: yellow;
+      text-decoration: overline
+    }
+
+    .red {
+      background-color: red;
+      text-decoration: line-through;
+
+    }
+
+    .brown {
+      background-color: brown;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -25,16 +61,24 @@
   <h1>Exercícios 3.2</h1>
   <p class="list-color">Qual é a sua cor favorita?</p>
   <ul class="list-color">
-    <li>Amarelo</li>
-    <li>Vermelho</li>
-    <li>Marrom</li>
+    <li class="yellow">Amarelo</li>
+    <li class="red">Vermelho</li>
+    <li class="brown">Marrom</li>
   </ul>
 
-  <!-- Exercícios
+  <!-- Exercícios 1
      1 - Modifique o tamanho do h1 para 65 pixels
      2 - Modifique a cor do texto do h1 para laranja
      3 - Modifique a cor de fundo da lista não ordenada
      4 - Crie uma classe para modificar a cor de fundo da tag p e da ul ao mesmo tempo
+    -->
+  <!-- Exercícios 2
+     1 - Modifique o família do h1 para sans-serif
+     2 - Deixe o parágrafo com o font-weight 600
+     3 - Modifique o font-size do body para 16px
+     4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body
+     5 - Explore as propriedades font-style, line-height, text-align e text-decoration
+     6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto
     -->
 </body>
 
