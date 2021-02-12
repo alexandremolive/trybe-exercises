@@ -1,0 +1,28 @@
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+ol:hover {
+    background-color: lightcoral;
+
+
+
+}ol:active {
+    font-family: monospace;
+
+}
+li, ol {
+    list-style: none;
+
+
+}
