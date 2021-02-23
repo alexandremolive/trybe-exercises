@@ -88,10 +88,13 @@ th, td {
 .articles {
    text-align: center;
 }
-.info {
-    display: inline-block;
-    padding: 20px;
+.info h2{
+    font-size: 18px;
+    padding-top: 20px;
     
+}
+.info a {
+    margin-left: 20px;
 }
 .video {
     
