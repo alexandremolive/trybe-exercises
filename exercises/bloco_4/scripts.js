@@ -113,24 +113,63 @@
 
 //QUINTO
 
-let equalNumber = 0
-let index = 0
-let number = 0
+// let equalNumber = 0
+// let index = 0
+// let number = 0
 
-function checkNumbers(arrayNumbers) {
+// function checkNumbers(arrayNumbers) {
 
-    equalNumber = arrayNumbers[number]
+//     equalNumber = arrayNumbers[number]
 
-    for (number in arrayNumbers) {
+//     for (number in arrayNumbers) {
 
 
-        if (equalNumber === arrayNumbers[number]) {
-            smallestNumber = arrayNumbers[number]
-            index = index +1
-        }
+//         if (equalNumber === arrayNumbers[number]) {
+//             smallestNumber = arrayNumbers[number]
+//             index = index +1
+//         }
 
-    } console.log(index)
+//     } console.log(index)
 
-    return checkNumbers
+//     return checkNumbers
 
-} checkNumbers([2,2,5,6,2,4,6,6,6,2])
+// } EM CONSTRUÇÃO
+
+//SEXTO
+
+// let sum = 0
+
+// function sumNumbers (number) {
+
+//     for (let index = 0; index <= number; index += 1 ){
+
+//         sum = sum + index
+
+//     }   console.log('A soma de todos os números até ' + number + ' é: ' + sum)
+//     return sumNumbers
+// }sumNumbers(56)
+
+// SÉTIMO
+
+// let fullWord = []
+// let endWord = []
+
+// function compareString(stringWord, stringEnd) {
+
+//     fullWord = stringWord.split('')
+//     endWord = stringEnd.split('')
+
+//     if ((fullWord[fullWord.length - 1] && fullWord[fullWord.length - 2]) === (endWord[endWord.length - 1] && endWord[endWord.length - 2])) {
+//         console.log(true)
+//     } else {
+//         console.log(false)
+//     }
+
+//     return compareString
+// }
+// compareString('teclado', 'do')
+
+//BONUS
+
+//PRIMEIRO
+
