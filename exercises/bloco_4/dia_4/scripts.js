@@ -113,27 +113,9 @@
 
 //QUINTO
 
-// let equalNumber = 0
-// let index = 0
-// let number = 0
-
-// function checkNumbers(arrayNumbers) {
-
-//     equalNumber = arrayNumbers[number]
-
-//     for (number in arrayNumbers) {
 
 
-//         if (equalNumber === arrayNumbers[number]) {
-//             smallestNumber = arrayNumbers[number]
-//             index = index +1
-//         }
-
-//     } console.log(index)
-
-//     return checkNumbers
-
-// } EM CONSTRUÇÃO
+//EM CONSTRUÇÃO
 
 //SEXTO
 
