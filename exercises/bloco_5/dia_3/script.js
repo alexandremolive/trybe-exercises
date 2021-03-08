@@ -69,14 +69,25 @@ let fridayText = 'FRIDAY BABY'
 buttonFriday.addEventListener('click', function () {
   for (let index = 0; index < fridayDays.length; index += 1) {
 
-    if (fridayDays[index].innerHTML === fridayText) {
-      fridayDays[index].innerHTML = daysOfTheMonth
-    } else {
+    if (fridayDays[index].innerHTML !== fridayText) {
       fridayDays[index].innerHTML = fridayText
+    } else {
+      fridayDays[index].innerHTML = fridayDays
     }
   }
 })
 
+daysList.addEventListener('mouseover', function (event) {
+  event.target.style.fontSize = '32px';
+  event.target.style.transition = 'all ease 0.5s';
+  event.target.style.color = 'green';
+
+})
+daysList.addEventListener('mouseout', function (event) {
+  event.target.style.fontSize = '20px';
+  event.target.style.transition = 'all ease 0.5s';
+  event.target.style.color = '#777';
+})
 
 
 
