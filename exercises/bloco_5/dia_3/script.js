@@ -95,11 +95,20 @@ daysList.addEventListener('mouseout', function (event) {
 function createTask() {
   let myTasks = document.getElementsByClassName('my-tasks')
   let taskDay = document.createElement('span');
-  for (index = 0; index < myTasks.length; index += 1) {
+  for (let index = 0; index < myTasks.length; index += 1) {
     myTasks[index].appendChild(taskDay);
     taskDay.innerHTML = 'Estudar';
   }
 } createTask()
+
+function createLegendTask() {
+  let myTasks = document.getElementsByClassName('my-tasks');
+  let legendColor = document.createElement('div');
+  for (let index = 0; index < myTasks.length; index += 1) {
+    myTasks[index].appendChild(legendColor);
+    legendColor.style.backgroundColor = "green";
+  }
+} createLegendTask()
 
 
 
