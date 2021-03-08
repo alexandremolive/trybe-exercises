@@ -12,9 +12,11 @@ function createDaysOfTheWeek() {
 };
 createDaysOfTheWeek();
 // Escreva seu código abaixo.
+let dezDaysList = ['', 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+let daysList = document.querySelector('#days');
+
 function createDaysOfTheMonth() {
-  let dezDaysList = ['', 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  let daysList = document.querySelector('#days');
+
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
     let daysOfTheMonth = dezDaysList[index];
@@ -43,9 +45,15 @@ function createButtonHoliday() {
   buttonHoliday.setAttribute('id', 'btn-holiday');
 } createButtonHoliday()
 
+let holidayColor = 'white';
+let defaultColor = 'rgb(238,238,238)'
 buttonHoliday.addEventListener('click', function () {
   for (let index = 0; index < holidayDays.length; index += 1) {
-    holidayDays[index].style.backgroundColor = 'white'
+    if (holidayDays[index].style.backgroundColor === holidayColor) {
+      holidayDays[index].style.backgroundColor = defaultColor
+    } else {
+      holidayDays[index].style.backgroundColor = holidayColor
+    }
   }
 })
 
@@ -56,9 +64,16 @@ function createButtonFriday() {
   buttonFriday.setAttribute('id', 'btn-friday');
 } createButtonFriday()
 
+let fridayText = 'FRIDAY BABY'
+
 buttonFriday.addEventListener('click', function () {
   for (let index = 0; index < fridayDays.length; index += 1) {
-    fridayDays[index].innerHTML = 'FRIDAY BABY'
+
+    if (fridayDays[index].innerHTML === fridayText) {
+      fridayDays[index].innerHTML = daysOfTheMonth
+    } else {
+      fridayDays[index].innerHTML = fridayText
+    }
   }
 })
 
