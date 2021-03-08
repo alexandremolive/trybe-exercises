@@ -39,6 +39,9 @@ let buttonFriday = document.createElement('button')
 let holidayDays = document.querySelectorAll('.holiday')
 let fridayDays = document.querySelectorAll('.friday')
 
+
+
+
 function createButtonHoliday() {
   buttonHoliday.innerHTML = 'Feriados';
   buttonsContainer.appendChild(buttonHoliday);
@@ -80,15 +83,23 @@ buttonFriday.addEventListener('click', function () {
 daysList.addEventListener('mouseover', function (event) {
   event.target.style.fontSize = '32px';
   event.target.style.transition = 'all ease 0.5s';
-  event.target.style.color = 'green';
+
 
 })
 daysList.addEventListener('mouseout', function (event) {
   event.target.style.fontSize = '20px';
   event.target.style.transition = 'all ease 0.5s';
-  event.target.style.color = '#777';
+
 })
 
+function createTask() {
+  let myTasks = document.getElementsByClassName('my-tasks')
+  let taskDay = document.createElement('span');
+  for (index = 0; index < myTasks.length; index += 1) {
+    myTasks[index].appendChild(taskDay);
+    taskDay.innerHTML = 'Estudar';
+  }
+} createTask()
 
 
 
