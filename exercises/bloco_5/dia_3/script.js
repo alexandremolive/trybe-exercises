@@ -39,9 +39,6 @@ let buttonFriday = document.createElement('button')
 let holidayDays = document.querySelectorAll('.holiday')
 let fridayDays = document.querySelectorAll('.friday')
 
-
-
-
 function createButtonHoliday() {
   buttonHoliday.innerHTML = 'Feriados';
   buttonsContainer.appendChild(buttonHoliday);
@@ -89,7 +86,6 @@ daysList.addEventListener('mouseover', function (event) {
 daysList.addEventListener('mouseout', function (event) {
   event.target.style.fontSize = '20px';
   event.target.style.transition = 'all ease 0.5s';
-
 })
 
 function createTask() {
@@ -101,16 +97,23 @@ function createTask() {
   }
 } createTask()
 
+let legendColor = document.createElement('div');
+
 function createLegendTask() {
   let myTasks = document.getElementsByClassName('my-tasks');
-  let legendColor = document.createElement('div');
+
   for (let index = 0; index < myTasks.length; index += 1) {
     myTasks[index].appendChild(legendColor);
     legendColor.style.backgroundColor = "green";
   }
 } createLegendTask()
 
-
-
+legendColor.addEventListener('click', function (event) {
+  if (legendColor.className !== 'task-selected') {
+    event.target.className = 'task-selected';
+  } else {
+    event.target.className = 'task';
+  }
+})
 
 
