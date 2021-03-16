@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Currículo</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Preencha seus dados</h1>
+  </header>
+  <form action="" method="get">
+    <div class="container">
+      <fieldset class="personal-data">
+        <label for="user-name">Nome</label>
+        <input id="user-name" type="text" maxlength="40" name="user-name" required>
+        <br>
+        <label for="user-email">E-mail</label>
+        <input id="user-email" type="text" maxlength="50" name="user-email" required>
+        <br>
+        <label for="user-cpf">CPF</label>
+        <input id="user-cpf" type="text" maxlength="200" name="user-cpf" required>
+        <br>
+        <label for="user-city">Cidade</label>
+        <input id="user-city" type="text" maxlength="28" name="user-city" required>
+        <br>
+        <label for="user-state">Estado</label>
+        <select name="=user-state" id="user-state" required>
+        </select>
+        <br>
+        <label for="house">Casa</label>
+        <input type="radio" name="residence" id="house" value="house" required>
+        <label for="apartment">Apartamento</label>
+        <input type="radio" name="residence" id="apartment" value="apartment">
+      </fieldset>
+      <fieldset class="job-data">
+        <textarea required maxlength="1000" placeholder="Resumo do currículo" name="resume" id="resume" cols="30"
+          rows="10"></textarea>
+        <br>
+        <label for="user-job">Cargo</label>
+        <input required maxlength="40" type="text" name="user-job" id="user-job">
+        <br>
+        <label for="job-description">Descrição do cargo</label>
+        <input required maxlength="500" type="text" name="job-description" id="job-description">
+        <br>
+        <label for="date-begin">Data de inicio</label>
+        <input required type="date" name="date-begin" id="date-begin">
+        <br>
+        <button id="submit" type="submit">Enviar</button>
+        <button id="clear" type="">Limpar</button>
+
+      </fieldset>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
