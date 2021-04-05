@@ -74,6 +74,10 @@ const expectedResult = [
 
 function formatedBookNames() {
   // escreva seu código aqui
-}
+  let newArray = books.map((book)=> `${book.name} - ${book.genre} - ${book.author.name}`)
+  return newArray
+}formatedBookNames()
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
+
+
