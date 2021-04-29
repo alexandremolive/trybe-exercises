@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+  constructor() {
+    super()
+    this.handleClick = this.handleClick.bind(this)
+    this.state = {
+      numeroDeCliques: 0
 
+    }
+  }
+  handleClick(event) {
+    this.setState((estadoAnterior, _props) => ({
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1,
+    }))
+    let par = 1
+    par += this.state.numeroDeCliques
+    if (par % 2 === 0 && par !== 0) {
+      event.target.style.backgroundColor = 'green'
+    } else {
+      event.target.style.backgroundColor = 'rgb(239, 239, 239)'
+    }
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick}>{this.state.numeroDeCliques}</button>
+      </div>)
+  }
+}
 export default App;
