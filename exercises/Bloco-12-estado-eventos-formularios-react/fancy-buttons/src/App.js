@@ -6,26 +6,30 @@ class App extends React.Component {
     super()
     this.handleClick = this.handleClick.bind(this)
     this.state = {
-      numeroDeCliques: 0
+      numeroDeCliques: 0,
+      color: 'rgb(239, 239, 239)'
 
     }
   }
-  handleClick(event) {
+  handleClick() {
     this.setState((estadoAnterior, _props) => ({
       numeroDeCliques: estadoAnterior.numeroDeCliques + 1,
     }))
     let par = 1
+    let newColor;
+
     par += this.state.numeroDeCliques
     if (par % 2 === 0 && par !== 0) {
-      event.target.style.backgroundColor = 'green'
+      newColor = 'green'
     } else {
-      event.target.style.backgroundColor = 'rgb(239, 239, 239)'
+      newColor = 'rgb(239, 239, 239)'
     }
+    this.setState({ color: newColor })
   }
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>{this.state.numeroDeCliques}</button>
+        <button style={{ backgroundColor: this.state.color }} onClick={this.handleClick}>{this.state.numeroDeCliques}</button>
       </div>)
   }
 }
