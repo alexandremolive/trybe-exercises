@@ -37,14 +37,36 @@ header {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
   margin-right: auto;
   margin-left: auto;
-  margin-top: -150px;
+  margin-top: -80px;
   width: 250px;
   height: 250px;
 }
 
 .buttons {
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .buttons button {
+  font-size: 12px;
+  width: 70px;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(255, 222, 0);
+  margin-top: 5px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
+}
+
+.main-buttons button{
+  margin: 5px auto;
+  width: 100px;
+}
+
+.main-buttons button:nth-child(2){
   margin-left: 10px;
 }

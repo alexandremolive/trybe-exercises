@@ -3,26 +3,36 @@ import pokemons from '../data'
 import Pokemon from './Pokemon'
 import NextButton from './NextButton'
 import TypeButtons from './TypeButtons'
-
+import AllButton from './AllButton'
 class Pokedex extends React.Component {
   constructor() {
     super()
     this.state = {
       pokemon: 0,
-      type: 'Fire',
+      type: '',
     }
   }
 
+  handleAll = ({ target }) => {
+    const { value } = target
+    this.setState({
+      type: value
+    })
+  }
+
   handleType = () => {
-    const typePokemon = pokemons.filter((pokemon) => pokemon.type === (this.state.type))
-    return typePokemon
+    if (this.state.type !== '') {
+      const typePokemon = pokemons.filter((pokemon) => pokemon.type === (this.state.type))
+      return typePokemon
+    } return pokemons
+
   }
   handlePosition = () => {
     const positionPokemon = this.handleType().filter((pokemon) => this.handleType().indexOf(pokemon) === (this.state.pokemon))
     return positionPokemon
   }
   handleNextBtn = () => {
-    this.setState((prevState, _props) => ({
+    this.setState((prevState) => ({
       pokemon: prevState.pokemon + 1 !== this.handleType().length ? prevState.pokemon + 1 : 0
     }))
   }
@@ -40,8 +50,11 @@ class Pokedex extends React.Component {
           {this.handlePosition().map((pokemon) => < Pokemon key={Math.random() * 100} pokemon={pokemon} />)}
         </>
         <div className="buttons">
-          <NextButton handleNextBtn={this.handleNextBtn}/>
-          <TypeButtons handleTypeBtn={this.handleTypeBtn} pokemons={pokemons}/>
+          <div className="main-buttons">
+            <NextButton handleNextBtn={this.handleNextBtn} />
+            <AllButton handleAll={this.handleAll} />
+          </div>
+          <TypeButtons handleTypeBtn={this.handleTypeBtn} pokemons={pokemons} />
         </div>
       </>
     )

@@ -5,8 +5,8 @@ function Pokemon({ pokemon }) {
   const { value, measurementUnit } = averageWeight
   return (
     <div className="pokemon">
-      <div className="name">{name}</div>
-      <div className="type">{type}</div>
+      <div className="name">Name: {name}</div>
+      <div className="type">Type: {type}</div>
       <div className="weight">
         Peso: {value}{measurementUnit}
       </div>
