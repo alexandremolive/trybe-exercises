@@ -19,7 +19,6 @@ class Pokedex extends React.Component {
       type: value
     })
   }
-
   handleType = () => {
     if (this.state.type !== '') {
       const typePokemon = pokemons.filter((pokemon) => pokemon.type === (this.state.type))
@@ -47,7 +46,7 @@ class Pokedex extends React.Component {
     return (
       <>
         <>
-          {this.handlePosition().map((pokemon) => < Pokemon key={Math.random() * 100} pokemon={pokemon} />)}
+          {this.handlePosition().map((pokemon) => < Pokemon key={pokemon.name} pokemon={pokemon} />)}
         </>
         <div className="buttons">
           <div className="main-buttons">

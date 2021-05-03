@@ -48,9 +48,11 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 600px;
 }
 .buttons button {
   font-size: 12px;
+  font-weight: 22px;
   width: 70px;
   cursor: pointer;
   border: none;
@@ -64,7 +66,7 @@ header {
 
 .main-buttons button{
   margin: 5px auto;
-  width: 100px;
+  width: 150px;
 }
 
 .main-buttons button:nth-child(2){
