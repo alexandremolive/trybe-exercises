@@ -4,10 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: rgb(255, 222, 0);
   font-size: 14px;
 }
-
+body {
+  background-color: rgb(255, 222, 0);
+}
 header {
   height: 15vh;
   text-align: center;
@@ -17,23 +18,57 @@ header {
 .pokedex {
   border-radius: 15px;
   background-color: white;
-  height: 85vh;
+  height: 80vh;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   max-width: 900px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .pokemon {
+  background-color: rgb(255, 222, 0);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -80px;
+  width: 250px;
+  height: 250px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+.buttons button {
+  font-size: 12px;
+  font-weight: 22px;
+  width: 70px;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(255, 222, 0);
+  margin-top: 5px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4)
+}
+
+.main-buttons button{
   margin: 5px auto;
   width: 150px;
-  height: 165px;
+}
+
+.main-buttons button:nth-child(2){
+  margin-left: 10px;
 }
